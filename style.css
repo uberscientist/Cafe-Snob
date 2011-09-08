@@ -1,0 +1,139 @@
+/* CSS Style Sheet by NaK for above so below */
+
+body{
+	font-family: Helvetica, sans-serif;
+	color: #000;
+	background-color: #9BF;
+}
+h1 {
+	width:33%;
+	padding: 0px 0px 0px 10px;
+	border-bottom-style:solid;
+	border-left-style:solid;
+	border-color: #495370;
+	border-width: 8px 3px;
+	border-radius: 0px 22px;
+}
+h2 {
+	padding: 0px 0px 0px 5px;
+	border-bottom-style:solid;
+	border-left-style:solid;                   
+	border-color: #495370;
+	border-width: 5px 2px;
+	border-radius: 0px 10px;
+}
+h3 {
+	padding: 0px 0px 0px 5px;
+	border-bottom-style:solid;
+	border-left-style:solid;
+	border-color: #495370;
+	border-width: 4px 1px;
+	border-radius: 0px 10px;
+}
+ul {
+	background-color: #C1E1F9;
+	padding: 3px;
+	border-radius: 5px;
+}
+ul strong {
+	text-decoration: underline;
+}
+p {
+	padding: 10px;
+	background-color: #C1E1F9;
+	border-radius: 5px;
+}
+select {
+	float: left;
+}
+p.video {
+	padding: 10px 10px 0px 10px;
+	margin: 20px auto;
+	width: 425px;
+	height: 400px;
+}
+a:link {
+	color: #0007C3;
+	padding: 2px;
+	border-radius: 5px;
+	background-color: #C1E1F9;
+	font-weight: 900;
+	text-decoration: none;
+}
+a:visited {
+	color: #0007C3;
+	font-weight: 900;
+}
+a:hover {
+	color: #7B68EE;
+	text-decoration: underline;
+	font-weight: 900;
+}
+
+/* main index classes and ids */
+
+.floatbox {
+	float:left;
+	background-color: rgba(100,115,222,.5);
+	padding: 5px 10px 10px 20px;
+	margin: 0px 0px 10px 10px;
+	border-radius: 0px 60px;
+}
+.shadow {
+	box-shadow: 5px 5px 5px #111;
+}
+.astrisk {
+	font-size:.75em;
+	color: #0009C5;
+}
+
+#topbar{
+	position: relative;
+	top: -20px;
+	left: 15px;
+	word-spacing: 10px;
+}
+#main {
+	width: 400px;
+}
+#sidebar {
+	width: 222px;
+}
+#pageWrap {
+	width: 725px;
+	padding: 20px;
+	margin: 0px auto;
+}
+#bgtop{
+	position:fixed;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+	
+}
+#gravatar {
+	float: right;
+	margin: 5px;
+}
+
+#coffeeorder {
+	height: 3em;
+	background-color: #DCB;
+}
+
+/* not needed, for now.
+#fixedfoot {
+	position: fixed;
+	font-variant:small-caps;
+	bottom: 5px;
+	z-index: -1;
+}
+*/
+#pageWrapFill {
+	width: 600px;
+	padding: 10px 50px;
+	margin: 0px auto;
+	background-color: #92A9EB;
+	border-radius: 0px 60px;
+}
+

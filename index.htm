@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cafe Wanker Pre-alpha Test</title>
+<script type="text/javascript" src="dragdealer.js"></script>
+<link rel="stylesheet" type="text/css" href="dragdealer.css"/>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+<script>
+function genDrink(radReturn){
+	// var typeCheck = document.orderType.typeCheck[radReturn].checked
+	size = ["short", "tall", "grande", "venti"];
+	type = ["Warm", "Iced"];
+	type1 = ["caffe latte", "americano", "cafe breva"]
+	expresso = [",", "single,", "double,", "triple,", "quad,"];
+	milk = ["non-fat", "two percent", "whole", "soy","half-n-half instead of milk"];
+	syrup = ["chocolate", "caramel", "vanilla", "hazelnut", "cinnamon dolce", "orange", "raspberry", "peppermint", "almond", "simple"];
+	cream = ["with whip.", "no whip.", "light whip."];
+	order = ["upside down", "", "macchiato"];
+	foam = ["I like my lattes like I like my humor, dry.", "Make it nice and wet for me.", "And hold the foam for me.", ""];
+
+	var slider = new Dragdealer("coffee",
+	{
+		animationCallback: function() {
+			document.getElementById("size").firstChild.nodeValue = size[(Math.round(Math.random()*(size.length-1)))];
+			document.getElementById("type").firstChild.nodeValue = type[(Math.round(Math.random()*(type.length-1)))];
+			document.getElementById("type1").firstChild.nodeValue = type1[radReturn];
+			document.getElementById("expresso").firstChild.nodeValue = expresso[(Math.round(Math.random()*(expresso.length-1)))];
+			document.getElementById("milk").firstChild.nodeValue = milk[(Math.round(Math.random()*(milk.length-1)))];
+			document.getElementById("syrup").firstChild.nodeValue = syrup[(Math.round(Math.random()*(syrup.length-1)))];
+			document.getElementById("cream").firstChild.nodeValue = cream[(Math.round(Math.random()*(cream.length-1)))];
+			document.getElementById("order").firstChild.nodeValue = order[(Math.round(Math.random()*(order.length-1)))];
+			document.getElementById("foam").firstChild.nodeValue = foam[(Math.round(Math.random()*(foam.length-1)))];
+			document.getElementById("numPumps").firstChild.nodeValue = Math.round(Math.random()*3)+1;
+		}
+	});
+	slider.setValue(1,false);
+}
+
+window.onload = function(){
+	genDrink(0);
+}
+</script>
+
+</head>
+<body>
+<div id="pageWrapFill">
+<strong><p>You approach the counter and the barista asks "What can I get for you today?" and you say...</p>
+
+<div id="coffeeorder">
+	"<span id="type">Iced</span>
+	<span id="type1">latte</span>
+	<span id="size">vente</span>,
+	<span id="order">upside-down</span>
+	<span id="expresso">double</span>
+	<span id="milk">whole milk</span>
+
+	<span id="numPumps">2</span> pump(s)
+	<span id="syrup">simple</span> syrup,
+	<span id="cream">with whip</span>
+	<span id="foam">and hold the foam!</span>"
+</div></strong>
+<form name="orderType">
+	<input type="radio" name ="typeCheck" checked value="Latte" onclick="return genDrink(0)"/> Latte (Espresso/milk)
+	<input type="radio" name ="typeCheck" value="Americano" onclick="return genDrink(1)"/> Americano (Espresso/water)
+
+</form>
+<br/>
+	<div id="coffee" class="dragdealer">
+		<div style="left: 0px;" class="red-bar handle">Slide Me!</div>
+	</div>
+<p>Slide the coffee colored rectangle to generate a random lengthy latte order.  Uses the Dragdealer
+JS library. Sweet.</p>
+<p>Inspired by feeling like a retard at coffee shops...  I would think to myself silently:
+"I wish I could be smart, and douchey sounding, like my other friends...". Now I just whip out my 
+imaginary 7G iPhone 6 running Android 13.37 and with a flick of my wrist rattle off a sick sounding order
+as if I were sneezing elegantly (by accident).</p>
+<a href="http://twitter.com/uberscientist">@uberscientist</a> on twitter, see ya at the coffee shop!
+</div>
+
+</body>
+</html>
